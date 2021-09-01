@@ -1,7 +1,48 @@
-fieldset{
+*, * ::after, * ::before { margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+ }
+body{
     display: flex;
+    font-family: 'Roboto Condensed', sans-serif;
+    background-image: radial-gradient(circle, #5c0067 0%, #00d4ff 100%);
+    background-size: 100%;
+  }
+fieldset{
+    width:300px;
+    height:300px;
+    border-radius:20.5px;
+
 }
 
 .container{
-    display: block;
+    max-width: 300px;
+    background: radial-gradient(circle, rgba(231,231,232,1) 70%, rgba(203,198,199,1) 100%);
+
+
+    justify-content: center;
+    border-radius: 20.5px;
 }
+
+input {
+    width: 200px;
+    height: 24px;
+    padding: 0.2em;
+    border: 1px solid #b95ae6;
+    /*box-shadow: 1px 1px 1px;*/
+    display: inline-block;
+  }
+
+  label {
+    margin-bottom: 0.2em;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    padding: 5px;
+    margin: 2px;
+    display: block;
+  }
+
+  input, select, button{
+    font-family: 'Roboto Condensed', sans-serif;
+    font-size: 18px;
+  }
+  
