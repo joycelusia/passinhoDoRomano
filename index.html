@@ -10,28 +10,37 @@
     <title>Passinho do Romano</title>
 </head>
 <body>
-    <div class="container">
-        <fieldset>
+    <footer>
+        <h1>DeCode</h1>
+    </footer>
+    <main>
+        <div class="container">
+        
             <label for="digite">Digite seu texto
-                <input type="text" name="" id="">
-            </label>
+                <textarea name="" id="mensagem" cols="30" rows="10"></textarea>
         <label for=""> Metódo desejado:
-            <select name="" id="">
+            <select name="" id="escolha">
+                <option value="">Selecione opção</option>
                 <option id ="cifraC"value="">Cifra de César</option>
                 <option id="base"value="">Base64</option>
         </select>
         </label>
-        
+        <div class="hide">
+            <input type="number" name="" id="number">
+        </div>
             <input type="radio" name = "r1"   id="code">Codificar
-     
-       
             <input type="radio" name="r1" id="decode">Decodificar
-        
-        <label for="">
-            <button type="button">Confirma</button>
-        </label>
-        </fieldset>
-        <script src="./script.js"></script>
+            
+        <textarea name="" id="" cols="30" rows="10"></textarea>
+        <div class="botao">
+            <button type="button" onclick="executa()">Confirma</button>
+        </div>  
     </div>
+    </main>
+    
+   <footer>
+       <p class="pRodape">Site desenvolvido por <a>Joyce Lusia</a> para fins educacionais<br> Resilia Educação </p> 
+   </footer>
+    <script src="./script.js"></script>
 </body>
 </html>
