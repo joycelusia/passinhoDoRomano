@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="./style.css">
+    <link rel="stylesheet" href="./CSS/style.css">
     <link rel="icon" href="./assets/programming.png">
     <link href="https://fonts.googleapis.com/css2?family=Roboto+Condensed:wght@300&display=swap" rel="stylesheet">
     <title>Passinho do Romano</title>
@@ -14,33 +14,33 @@
         <h1>DeCode</h1>
     </footer>
     <main>
-        <div class="container">
+        <form class="container" name="formContainer">
         
             <label for="digite">Digite seu texto
-                <textarea name="" id="texto" cols="30" rows="10"></textarea>
-        <label for=""> Metódo desejado:
-            <select name="" id="escolha">
-                <option value="">Selecione opção</option>
-                <option id ="cifraC"value="">Cifra de César</option>
-                <option id="base"value="">Base64</option>
-        </select>
-        </label>
-        <div class="hide">
-            <input type="number" name="" id="number">
-        </div>
-            <input type="radio" name = "r1"   id="code">Codificar
-            <input type="radio" name="r1" id="decode">Decodificar
+                <input type="text" id="texto">
+            <label for=""> Metódo desejado:
+                <select id="escolha">
+                    <option value="nulo" id="nulo" disabled selected>Selecione opção</option>
+                    <option id ="cifraC"value="cifraC">Cifra de César</option>
+                    <option id="base"value="base">Base64</option>
+            </select>
+            </label>
+            <div style="display: none;" id="hide">
+                <input type="number" name="" id="number">
+            </div>
+            <input type="radio" name = "r1"   id="code" value="code">Codificar
+            <input type="radio" name="r1" id="decode" value="decode">Decodificar
             
         <textarea name="" id="mensagem  " cols="30" rows="10"></textarea>
         <div class="botao">
-            <button type="button" onclick="executa()">Confirma</button>
+            <button type="button">Confirma</button>
         </div>  
-    </div>
+    </form>
     </main>
     
    <footer>
        <p class="pRodape">Site desenvolvido por <a class="link" href="https://www.linkedin.com/in/joyce-lusia/">Joyce Lusia</a> para fins educacionais<br> Resilia Educação </p> 
    </footer>
-    <script src="./script.js"></script>
+    <script src="./scripts/script.js"></script>
 </body>
 </html>

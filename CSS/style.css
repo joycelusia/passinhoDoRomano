@@ -37,9 +37,9 @@ main{
     box-shadow: 0px 0px 12px rgba(0, 0, 0, 0.08);
 
 }
-.hide{
-  display: none;
-}
+
+
+
 input {
     height: 24px;
     padding: 0.2em;
@@ -53,7 +53,8 @@ input {
     margin: 2px;
     display: block;
   }
-  textarea {
+  
+  #texto {
     margin: 8px;
     height: 158px;
     width: 243px;
