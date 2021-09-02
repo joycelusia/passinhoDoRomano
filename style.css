@@ -19,6 +19,8 @@ main{
     text-align: center;
     font-size: 60px;
     padding: 5px;
+    text-shadow: black 0.1em 0.1em 0.2em
+
 
   }
 
@@ -32,7 +34,8 @@ main{
     margin: 50px;
     border-radius: 20.5px;
     position:relative;
-    flex: 1;
+    box-shadow: 0px 0px 12px rgba(0, 0, 0, 0.08);
+
 }
 .hide{
   display: none;
@@ -81,5 +84,9 @@ input {
     color: white;
     position: absolute;
     width: 100%;
-
   }
+
+
+ .link{
+    text-decoration: none;
+ } 
