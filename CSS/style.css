@@ -5,7 +5,7 @@
 body{
    
     font-family: 'Roboto Condensed', sans-serif;
-    background-image: radial-gradient(circle, #5c0067 0%, #00d4ff 100%);
+    background-image: radial-gradient(#e66465, #9198e5);
     background-size: 100%;
    
   }
@@ -53,7 +53,6 @@ input {
     margin: 2px;
     display: block;
   }
-  
   #texto {
     margin: 8px;
     height: 158px;

@@ -1,4 +1,5 @@
 var escolha = document.querySelector("#escolha");
+var botao = document.querySelector("#button");
 
 escolha.addEventListener("change", function (evento) {
     evento.preventDefault();
@@ -20,24 +21,39 @@ rb.forEach((radio) => {
     radio.addEventListener("change", function (evento) {
         evento.preventDefault();
 
-        var botao = document.querySelector("button");
 
         if (evento.target.value == "decode") {
             botao.innerHTML = "Decodificar ";
+           
         } else {
             botao.innerHTML = "Codificar";
+          
         }
     });
 });
 
+function click(){
 
-var form = document.forms.formContainer
+    if(escolha.value == "cifraC"){
+        cifra();
+        console.log("tá funcionando")
+    }
+
+    else{
+        base();
+        console.log("tá funcionando")
+    }
+
+}
+
+
+var form =  document.forms.formulario
 
 form.addEventListener('submit', function (evento) {
     evento.preventDefault();
 
     var texto = form.texto.value;
-    var escolha = form.selecionar.value;
+    var escolha = form.escolha.value;
     var number = form.number.value;
     var rb = form.r1.value;
     var mensagem = '';
@@ -47,11 +63,11 @@ form.addEventListener('submit', function (evento) {
     }
 
     else{
-        mensagem = base(rb, mensagem);
+        mensagem = base(rb, texto);
     }
 
     var resposta = document.getElementById('mensagem');
-    resposta.innerHTML = `${mensagem}`;
+    resposta.innerHTML = `<p>${mensagem}</p>`;
 
     
 
@@ -59,8 +75,8 @@ form.addEventListener('submit', function (evento) {
 });
 
 /*BASE64*/
-function base(rb, texto){
-    if(rb == 'code'){
+function base(r1, texto){
+    if(r1 == 'code'){
         return btoa(texto);
     }
 
@@ -69,6 +85,7 @@ function base(rb, texto){
     }
 }
 
+/*CIFRA DE CÉSAR*/
 function cifra(rb, texto, number){
     number = Number(number);
 
@@ -78,7 +95,7 @@ function cifra(rb, texto, number){
         var letra = texto[i];
         var code = letra.charCodeAt();
 
-        if (botoes == 'codificar') {
+        if (rb == 'code') {
             code += number;
         }
 
@@ -86,7 +103,7 @@ function cifra(rb, texto, number){
             code -= number;
         }
 
-        resultado += String.fromCharCode(codigo);
+        resultado += String.fromCharCode(code);
     }
 
     return resultado;

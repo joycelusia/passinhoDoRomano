@@ -14,7 +14,7 @@
         <h1>DeCode</h1>
     </footer>
     <main>
-        <form class="container" name="formContainer">
+        <form class="container" name="formulario">
         
             <label for="digite">Digite seu texto
                 <input type="text" id="texto">
@@ -26,15 +26,19 @@
             </select>
             </label>
             <div style="display: none;" id="hide">
-                <input type="number" name="" id="number">
+                <input type="number" id="number" default="0" min="1" value="1">
             </div>
             <input type="radio" name = "r1"   id="code" value="code">Codificar
             <input type="radio" name="r1" id="decode" value="decode">Decodificar
             
-        <textarea name="" id="mensagem  " cols="30" rows="10"></textarea>
+        <hr>
+            <p id="mensagem"></p>
+        <hr>
+
         <div class="botao">
-            <button type="button">Confirma</button>
-        </div>  
+            <button id="button" type="submit">Confirma</button>
+        </div> 
+        
     </form>
     </main>
     
